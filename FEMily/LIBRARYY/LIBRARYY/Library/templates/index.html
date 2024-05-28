@@ -1,0 +1,234 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibRoom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('{%static 'img/Desktop - 4.png'%}');
+    width:  1579px;;
+    color: #fff;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Montserrat alternates";
+
+}
+
+.header {
+    font-size: 1.5vw;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    margin-top: 0.5vw;
+    float: right;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.intro {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 18px;
+    margin: 20px 0 0;
+}
+
+.new-books, .news, .feedback {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.new-books h2, .news h2, .feedback h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.books {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.books img {
+    width: 200px;
+    height: 300px;
+}
+
+.news-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 0;
+    display: inline-block;
+    width: 60vw;
+    font-size: 1.5vw;
+    border: 0.2vw solid #fff;
+}
+
+.feedback textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 0vw;
+    display: inline-block;
+    width: 60vw;
+    font-size: 1.5vw;
+    height: 100px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 0.2vw solid #fff;
+}
+
+.feedback button {
+    background-image: url('Component\ 3.svg');
+    background-size: cover; /* чтобы изображение занимало всю площадь кнопки */
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-items: center;
+    width: 16.8vw;
+    height: 3.2vw;
+    text-indent: -9999px;
+    background-color: transparent;
+}
+
+footer {
+
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.foto{
+    background-image: url('Component\ 21.png');
+    height: 43vw;
+    width: 1579px;
+}
+
+        .main_card{
+        background: red;
+        border:0.1vw solid;
+        border-color: #F84914;
+        box-shadow: 0 0 0.5vw #F84914;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        margin-bottom: 10vw;
+    }
+    .main_card_heading{
+        font-size: 2vw;
+        font-weight: 600;
+        margin-bottom: 1vw;
+    }
+    .main_card_description{
+        font-size: 1.3vw;
+        font-weight: 500;
+    }
+    .main_card_txt{
+        padding: 2vw;
+    }
+    .main_container{
+        margin-top: 8vw;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .img{
+        position: relative;
+        height: 23vw;
+        width: 23vw;
+    }
+
+
+</style>
+<body>
+    <div class="foto">
+    <header class="header">
+        <div class="container">
+            <img src="{%static 'img/LibRoom.svg'%}">
+            <nav class="nav">
+                <a href="katalog/">Наши книжки</a>
+                <a href="kontakt/">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <img src="{%static 'img/LibRoom.svg'%}" style="height: 4vw; margin-top: 2vw;">
+                <p style="font-size: 2.5vw; margin-top: 4vw; margin-left: 8vw; margin-right: 8vw;">Ваш уютный уголок для погружения в мир книг и знаний. Откройте двери в мир чтения уже сегодня!</p>
+            </div>
+        </section></div>
+        <section class="new-books">
+            <div class="container">
+                <p style="font-size: 2.5vw;">НОВИНКИ</p>
+                <div class="news-content">
+                    <p >{%for i in data3%} <h2>Новость{{forloop.counter}}</h2></p>
+                    <p >{{i}} <br>{%endfor%}</p>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <p style="font-size: 2.5vw;">НОВОСТИ БИБЛИОТЕКИ</p>
+                <div class="news-content">
+                    <h3 style="text-decoration: underline;">Поступления книг</h3>
+                    <p>"LibRoom рад сообщить о расширении своей коллекции книг! Теперь у нас есть еще больше лучших произведений для всех любителей чтения."</p>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+
+                <p style="font-size: 2.5vw; font-family: Montserrat alternates">ОСТАВЬТЕ ОТЗЫВ</p>
+                <textarea placeholder="ваше сообщение....."></textarea><br>
+                <button><img src="{%static 'Component 3.svg'%}"></button>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <img src="{%static 'img/LibRoom.svg'%}">
+        </div>
+    </footer>
+</body>
+</html>

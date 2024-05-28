@@ -1,0 +1,167 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style_staff.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="img_index/logomini.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Femily chill & beauty</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+   }
+.container{
+    max-width: 170vw;
+    padding: 0 2vw;
+    margin: 0 auto;
+}
+.container_slider_txt{
+    max-width: 122vw;
+    padding: 0 1vw;
+    margin: 0 auto;
+}
+header{
+    background-color:rgba(224, 194, 188, 0.97) ;
+    height: 5vw;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_text{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.5vw;
+    margin-left: 0.7vw;
+}
+.nav_img{
+    margin-left: 0.7vw;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+main{
+    background-image: url("{% static 'img/staff_img/background.png' %}") ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: white;
+    padding-top: 10vh;
+}
+.main_line_staff{
+    height: 0.3vw;
+    background-color: white;
+    border: 0;
+    width: 35vw;
+}
+.main_line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+}
+footer{
+    background-color:rgba(64, 64, 64, 1) ;
+    height: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: flex-start;
+}
+.main_card{
+    border: 0.3vw solid;
+    border-radius: 1.3vw;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    margin-bottom: 10vw;
+}
+.main_card_heading{
+    font-size: 1.9vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+.main_card_description{
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.main_card_txt{
+    padding: 2vw;
+}
+.main_container{
+    margin-top: 10vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    position: relative;
+    height: 8vw;
+    width: 16vw;
+}
+.card{
+    position: relative;
+    height: 18vw;
+    width: 18vw;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+<body>
+    <div style="background-color: rgba(224, 194, 188, 0.97) ; height: 5vw;">
+        <div class="container">
+            <header>
+                <img class="logo" src="{% static 'img/img_index/logo.svg' %}" alt="">
+                <nav>
+                    <div class="nav_txt">
+                        <img src="{% static 'img/staff_img/home.svg' %}" alt="" class="nav_img">
+                        <a href="/" class="nav_text">Главная</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <main>
+        <div class="main_line">
+            <hr class="main_line_staff">
+            <p>НАШИ СОТРУДНИКИ</p>
+            <hr class="main_line_staff">
+        </div>
+        <div class="main_container">
+            <div class="main_card">
+                <div class="main_card_txt">
+                    <p class="main_card_heading">{%for i in data%} <h2>Сотрудник</h2></p>
+                    <p class="main_card_description">{{i}} <br>{%endfor%}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://vk.com/femily_nn"><img src="{% static 'img/staff_img/vk.svg' %}" alt="VK" style="margin-left: 4vw; width: 2vw; height: 2vw;"></a>
+        <a href="https://instagram.com/femily_nn?igshid=MzRlODBiNWFlZA=="><img src="{% static 'img/staff_img/inst.svg' %}" alt="INST" style="margin-left: 1vw; width: 2vw; height: 2vw;"></a>
+    </footer>
+</body>
+</html>

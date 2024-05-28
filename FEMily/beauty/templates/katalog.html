@@ -1,0 +1,191 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style_katalog.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" type="image/png" href="img_index/logomini.png">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <title>Femily chill & beauty</title>
+    </head>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+   }
+.container{
+    max-width: 150vw;
+    padding: 0 2vw;
+    margin: 0 auto;
+}
+.container_slider_txt{
+    max-width: 122vw;
+    padding: 0 1vw;
+    margin: 0 auto;
+}
+header{
+    background-color:rgba(224, 194, 188, 0.97) ;
+    height: 5vw;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_text{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.5vw;
+    margin-left: 0.7vw;
+}
+.nav_img{
+    margin-left: 0.7vw;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+.about_us{
+    background-image: url("{% static 'img/img_katalog/fone.png' %}");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:80vw ;
+    color: white;
+    font-size: 2.1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.hr_about_us{
+    width: 35vw;
+    height: 0.2vw;
+    border: none;
+    background-color: white;
+}
+.about{
+    padding-top: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+.logo{
+    position: relative;
+    height: 8vw;
+    width: 16vw;
+}
+.info_txt{
+    color: white;
+    font-size: 1.9vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.yslyga{
+    font-size: 1.9vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-left: 9vw;
+    margin-bottom: 3vw;
+}
+.yslyga_bottom{
+    font-size: 1.9vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-left: 9vw;
+
+.about_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-weight: 300;
+    text-align: justify;
+}
+}
+.main_button{
+    width: 16vw;
+    height: 20vw;
+    margin-left: 3vw;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0.2vw;
+    border-style:solid;
+    border-radius: 1.3vw;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    border-color: white;
+    transition: transform .2s;
+}
+.main_button:hover {
+    transform: scale(1.1);
+}
+.foto{
+    position: relative;
+    height: 15vw;
+    width: 13vw;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+footer{
+    background-color:rgba(64, 64, 64, 1) ;
+    height: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: flex-start;
+}
+    </style>
+    <body>
+        <div style="background-color: rgba(224, 194, 188, 0.97) ; height: 5vw;">
+            <div class="container">
+                <header>
+                    <img class="logo" src="{% static 'img/img_index/logo.svg' %}" alt="">
+                    <nav>
+                        <div class="nav_txt">
+                            <img src="{% static 'img/staff_img/home.svg' %}" alt="" class="nav_img">
+                            <a href="/" class="nav_text">Главная</a>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+            <div class="about_us">
+                <div class="about">
+                    <hr class="hr_about_us">
+                    <p>НАШИ УСЛУГИ</p>
+                    <hr class="hr_about_us">
+                </div>
+            <p class="info_txt">Салон красоты FEMILY включает в свои услуги <br> широкий спектр процедур, направленных на <br> улучшение внешнего вида и самочувствия клиента.</p>
+            <div class="yslyga">
+                <div class="about_txt">
+                <p style="margin-bottom: 10vw;">{%for i in data2%} <h2>Услуга</h2></p>
+                <p style="margin-bottom: 10vw;">{{i}} <br>{%endfor%}</p>
+            </div>
+            </div>
+        <footer>
+            <div class="footer_content" style="margin-left: 4vw ;">
+                <a href="https://vk.com/femily_nn"><img src="{% static 'img/img_index/vk.svg' %}" alt=""></a>
+                <a href="https://instagram.com/femily_nn?igshid=MzRlODBiNWFlZA=="><img src="{% static 'img/img_index/inst.svg' %}" alt="" style="margin-left: 1vw;"></a>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style_about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="img_index/logomini.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Femily chill & beauty</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+   }
+.container{
+    max-width: 170vw;
+    padding: 0 2vw;
+    margin: 0 auto;
+}
+header{
+    background-color:rgba(224, 194, 188, 0.97) ;
+    height: 10vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    position: relative;
+    height: 8vw;
+    width: 16vw;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_text{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.5vw;
+    margin-left: 0.7vw;
+}
+.nav_img{
+    margin-left: 0.7vw;
+    position: relative;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+.about_us{
+    background-image: url("{% static 'img/img_index/frame_info.svg' %}");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:61vw ;
+    color: white;
+    font-size: 2.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.hr_about_us{
+    width: 40vw;
+    height: 0.2vw;
+    border: none;
+    background-color: white;
+}
+.about{
+    padding-top: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+.container_about_txt{
+    max-width: 122vw;
+    padding: 0 1vw;
+    margin-top: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.about_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-weight: 300;
+    text-align: justify;
+}
+.main_card_txt{
+    padding: 2vw;
+    font-size: 24pt;
+    font-weight: 300;
+    margin-bottom: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main_card{
+    border:0.5vh solid;
+    border-radius: 1.9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 77vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.jopa{
+    margin-top: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.otzuv{
+    color: white;
+    font-size: 2.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-top: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+.hr_otzuv{
+    width: 40vw;
+    height: 0.2vw;
+    border: none;
+    background-color: white;
+}
+footer{
+    background-color:rgba(64, 64, 64, 1) ;
+    height: 5vw;
+    display: flex;
+    align-items:center ;
+    justify-content: flex-start;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.card_img{
+    width: 22vw;
+    height: 25vw;
+    margin-right: 12vw;
+}
+.card_text{
+    font-weight: 300;
+    font-size: 1.8vw;
+    text-align: justify;
+}
+.cart_text_title{
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 300;
+}
+.card{
+    padding: 2vw;
+    border: 0.25vw solid;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container-otzv{
+    margin: 4.5vw 0 4.5vw 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+</style>
+<body>
+    <div style="background-color: rgba(224, 194, 188, 0.97) ; height: 10vh;">
+        <div class="container">
+            <header>
+                <img class="logo" src="{% static 'img/img_index/Component 2.svg' %}" alt="">
+                <nav>
+                    <div class="nav_txt">
+                        <img src="{% static 'img/img_index/home.svg' %}" alt="" class="nav_img">
+                        <a href="/" class="nav_text">Главная</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+        <div class="about_us">
+            <div class="about">
+                <hr class="hr_about_us">
+                <p>КЛИЕНТЫ</p>
+                <hr class="hr_about_us">
+            </div>
+        <div class="container_about_txt">
+            <div class="about_txt">
+                <p style="margin-bottom: 10vw;">{%for i in data3%} <h2>Клиент</h2></p>
+                <p style="margin-bottom: 10vw;">{{i}} <br>{%endfor%}</p>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_content" style="margin-left: 4vw ;">
+                <a href="https://vk.com/femily_nn"><img src="{% static 'img/img_index/vk.svg' %}" alt="" style="width: 2vw"></a>
+                <a href="https://instagram.com/femily_nn?igshid=MzRlODBiNWFlZA=="><img src="{% static 'img/img_index/inst.svg' %}" alt="" style="margin-left: 1vw; width: 2vw"></a>
+            </div>
+        </footer>
+        </div>
+</body>
+</html>
